@@ -8,6 +8,7 @@ import Totalizer from './Totalizer'
 import Manager from './Manager'
 import Cashier from './Cashier'
 import Role from './Role'
+import DevicesSetup2 from "./DevicesSetup2";
 
 function Router() {
   return (
@@ -15,6 +16,7 @@ function Router() {
         <Route path="/" element={ <Login/> } />
         <Route path="/home" element={ <Home/> } />
         <Route path="/devices" element={ <Devices/> } />
+        <Route path="/setup2" element={ <DevicesSetup2/> } />
         <Route path="/tank" element={ <Tank/> } />
         <Route path="/totalizer" element={ <Totalizer/> } />
         <Route path="/manager" element={ <Manager/> } />

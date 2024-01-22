@@ -1,10 +1,9 @@
 import React from "react";
 import { DropDownProps } from "../../pages/types/DropDown.types";
 
-const DropDown: React.FC<DropDownProps> = ({ setValue, value }) => {
+const DropDown1: React.FC<DropDownProps> = ({ setValue, value }) => {
     return (
-        <div className="w-[200px]">
-            <label className="text-slate-200">Dispenser No</label>
+        <div className="w-[47%]">
             <select
                 value={value}
                 onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
@@ -12,9 +11,9 @@ const DropDown: React.FC<DropDownProps> = ({ setValue, value }) => {
                 }
                 name="languages"
                 id="lang"
-                className="mt-4 h-[45px] rounded-md p-2 px-1 w-[100%]"
+                className="h-[45px] ps-3 rounded-md p-2 px-1 w-[100%]"
             >
-                <option value="None">None</option>
+                <option value="0">None</option>
                 <option value="1">Dispenser 1</option>
                 <option value="2">Dispenser 2</option>
                 <option value="3">Dispenser 3</option>
@@ -27,4 +26,4 @@ const DropDown: React.FC<DropDownProps> = ({ setValue, value }) => {
     );
 };
 
-export default DropDown;
+export default DropDown1;
