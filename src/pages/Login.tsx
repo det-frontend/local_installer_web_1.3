@@ -1,22 +1,21 @@
-import React from 'react'
-import LoginContainer from '../components/LoginContainer'
-import LoginForm from '../components/LoginForm'
-import LoginContent from '../components/LoginContent'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-
+import React from "react";
+import LoginContainer from "../components/LoginContainer";
+import LoginForm from "../components/LoginForm";
+import LoginContent from "../components/LoginContent";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function Login() {
   return (
     <>
-      <Header/>
+      <Header />
       <LoginContainer>
-       <LoginContent/>
-       <LoginForm/>
+        <LoginContent />
+        <LoginForm />
       </LoginContainer>
-      <Footer/>
+      <Footer />
     </>
-  )
+  );
 }
 
-export default Login
+export default Login;

@@ -47,21 +47,21 @@ function DevicesSetup2() {
   // const [brandType, setBrandType] = useState<string>('none');
   //
   const [nozzleNo1, setNozzleNo1] = useState<string>("0");
-  const [fuelType1, setFuelType1] = useState<string>("0");
+  const [fuelType1, setFuelType1] = useState<string>("");
   const [nozzleNo2, setNozzleNo2] = useState<string>("0");
-  const [fuelType2, setFuelType2] = useState<string>("0");
+  const [fuelType2, setFuelType2] = useState<string>("");
   const [nozzleNo3, setNozzleNo3] = useState<string>("0");
-  const [fuelType3, setFuelType3] = useState<string>("0");
+  const [fuelType3, setFuelType3] = useState<string>("");
   const [nozzleNo4, setNozzleNo4] = useState<string>("0");
-  const [fuelType4, setFuelType4] = useState<string>("0");
+  const [fuelType4, setFuelType4] = useState<string>("");
   const [nozzleNo5, setNozzleNo5] = useState<string>("0");
-  const [fuelType5, setFuelType5] = useState<string>("0");
+  const [fuelType5, setFuelType5] = useState<string>("");
   const [nozzleNo6, setNozzleNo6] = useState<string>("0");
-  const [fuelType6, setFuelType6] = useState<string>("0");
+  const [fuelType6, setFuelType6] = useState<string>("");
   const [nozzleNo7, setNozzleNo7] = useState<string>("0");
-  const [fuelType7, setFuelType7] = useState<string>("0");
+  const [fuelType7, setFuelType7] = useState<string>("");
   const [nozzleNo8, setNozzleNo8] = useState<string>("0");
-  const [fuelType8, setFuelType8] = useState<string>("0");
+  const [fuelType8, setFuelType8] = useState<string>("");
 
   const { loadToken } = useTokenStorage();
   const [{ data_g, loading_g, error_g }, fetchItGet] = UseGet();
@@ -86,14 +86,14 @@ function DevicesSetup2() {
 
   const handleAdd = (pswd: string, key: string) => {
     const fuel = {
-      fuelid1: parseInt(fuelType1),
-      fuelid2: parseInt(fuelType2),
-      fuelid3: parseInt(fuelType3),
-      fuelid4: parseInt(fuelType4),
-      fuelid5: parseInt(fuelType5),
-      fuelid6: parseInt(fuelType6),
-      fuelid7: parseInt(fuelType7),
-      fuelid8: parseInt(fuelType8),
+      fuelid1: fuelType1,
+      fuelid2: fuelType2,
+      fuelid3: fuelType3,
+      fuelid4: fuelType4,
+      fuelid5: fuelType5,
+      fuelid6: fuelType6,
+      fuelid7: fuelType7,
+      fuelid8: fuelType8,
     };
 
     const pump = {
@@ -108,6 +108,7 @@ function DevicesSetup2() {
       pumpid7: parseInt(nozzleNo7),
       pumpid8: parseInt(nozzleNo8),
     };
+    console.log(fuel, "lllllllllllllllllll");
     client.publish(
       `detpos/local_server/initial1/${pswd}/${key}`,
       JSON.stringify(pump)
